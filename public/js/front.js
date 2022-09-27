@@ -2034,14 +2034,14 @@ var render = function render() {
     staticClass: "p-3 m-3"
   }, [_vm._v("\n            Recent posts:\n        ")]), _vm._v(" "), _c("div", {
     staticClass: "row"
-  }, [_c("br"), _vm._v(" "), _vm._l(_vm.posts, function (post) {
+  }, _vm._l(_vm.posts, function (post) {
     return _c("Card", {
       key: post.id,
       attrs: {
         post: post
       }
     });
-  })], 2)])]);
+  }), 1)])]);
 };
 
 var staticRenderFns = [];
