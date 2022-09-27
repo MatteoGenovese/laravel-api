@@ -18,9 +18,8 @@ class PostController extends Controller
         $posts = Post :: with('user')->paginate(20);
         return response()->json([
             'reponse' => true,
-            "results" => [
-                'data' => $posts,
-            ]
+            "results" =>  $posts,
+
         ]);
     }
 
