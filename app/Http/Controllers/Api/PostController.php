@@ -15,11 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post :: with('user')->paginate(20);
+        $posts = Post :: with('user.roles')->paginate(50);
+
         return response()->json([
             'reponse' => true,
             "results" =>  $posts,
-
         ]);
     }
 
@@ -52,7 +52,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::with('user')->find($id);
+        $post = Post::with('user.roles')->find($id);
 
         if ($post) {
             return response()->json([
